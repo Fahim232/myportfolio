@@ -7,9 +7,14 @@
   <meta name="description" content="Fahim Montasir – Computer Science student at United International University. Passionate developer with projects in DBMS, OOP, Systems Programming, and Electronics." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
     
     :root {
       --bg-primary:   #0a0e27;
@@ -31,7 +36,7 @@
     html { scroll-behavior: smooth; }
     
     body {
-      font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       background-color: var(--bg-primary);
       color: var(--text-primary);
       line-height: 1.6;
@@ -218,11 +223,12 @@
       color: var(--accent-cyan);
       font-size: 0.85rem;
       font-weight: 600;
-      padding: 8px 16px;
+      padding: 10px 18px;
       border-radius: 50px;
       margin-bottom: 24px;
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'Fira Code', monospace;
       backdrop-filter: blur(10px);
+      animation: slideIn 0.6s ease-out;
     }
 
     .hero-badge .dot {
@@ -238,13 +244,19 @@
       50% { opacity: 0.4; transform: scale(0.8); }
     }
 
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
     .hero-title {
       font-size: clamp(2.8rem, 6vw, 4.2rem);
       font-weight: 800;
       line-height: 1.1;
       letter-spacing: -1px;
       margin-bottom: 16px;
-      font-family: 'Geist', sans-serif;
+      font-family: 'Poppins', sans-serif;
+      animation: slideIn 0.8s ease-out 0.1s backwards;
     }
 
     .name-grad {
@@ -255,26 +267,12 @@
     }
 
     .hero-subtitle {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'Fira Code', monospace;
       color: var(--accent-cyan);
       font-size: 1.05rem;
       margin-bottom: 24px;
       letter-spacing: 0.5px;
-    }
-
-    .cursor {
-      display: inline-block;
-      width: 2px;
-      height: 1.2em;
-      background: var(--accent-cyan);
-      margin-left: 4px;
-      animation: blink 1s step-end infinite;
-      vertical-align: middle;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
+      animation: slideIn 0.8s ease-out 0.2s backwards;
     }
 
     .hero-desc {
@@ -283,12 +281,14 @@
       margin-bottom: 40px;
       max-width: 520px;
       line-height: 1.7;
+      animation: slideIn 0.8s ease-out 0.3s backwards;
     }
 
     .hero-cta {
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
+      animation: slideIn 0.8s ease-out 0.4s backwards;
     }
 
     .btn-primary {
@@ -307,7 +307,7 @@
       box-shadow: 0 8px 24px rgba(6, 182, 212, 0.25);
       border: none;
       cursor: pointer;
-      font-family: 'Geist', sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
 
     .btn-primary:hover {
@@ -334,7 +334,7 @@
       transition: all 0.3s ease;
       background: transparent;
       cursor: pointer;
-      font-family: 'Geist', sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
 
     .btn-outline:hover {
@@ -350,6 +350,7 @@
       justify-content: center;
       align-items: center;
       position: relative;
+      animation: slideIn 0.8s ease-out 0.2s backwards;
     }
 
     .hero-image-ring {
@@ -458,7 +459,7 @@
     }
 
     .section-label {
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'Fira Code', monospace;
       color: var(--accent-cyan);
       font-size: 0.75rem;
       font-weight: 700;
@@ -511,6 +512,18 @@
       grid-template-columns: 1fr 1fr;
       gap: 80px;
       align-items: start;
+    }
+
+    .about-content h3 {
+      font-size: 1.25rem;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .about-content p {
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 20px;
     }
 
     .skills-grid {
@@ -700,7 +713,7 @@
       border-radius: 50px;
       padding: 5px 12px;
       font-size: 0.75rem;
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'Fira Code', monospace;
       color: var(--text-muted);
       transition: all 0.3s ease;
     }
@@ -826,7 +839,7 @@
     .tl-meta {
       color: var(--text-muted);
       font-size: 0.8rem;
-      font-family: 'JetBrains Mono', monospace;
+      font-family: 'Fira Code', monospace;
       margin-bottom: 8px;
       letter-spacing: 0.3px;
     }
@@ -856,6 +869,10 @@
     }
 
     /* CONTACT SECTION */
+    #contact {
+      background: var(--bg-secondary);
+    }
+
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -863,16 +880,29 @@
       align-items: start;
     }
 
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
     .contact-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 18px;
       padding: 40px;
+      transition: all 0.3s ease;
+    }
+
+    .contact-card:hover {
+      border-color: var(--accent-cyan);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px);
     }
 
     .contact-link-row {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 16px;
       padding: 16px 0;
       border-bottom: 1px solid var(--border);
@@ -946,7 +976,7 @@
       border-radius: 12px;
       padding: 14px 16px;
       color: var(--text-primary);
-      font-family: 'Geist', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 0.95rem;
       transition: all 0.3s ease;
     }
@@ -967,7 +997,7 @@
     .form-textarea {
       resize: vertical;
       min-height: 140px;
-      font-family: 'Geist', sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
 
     .form-submit {
@@ -978,7 +1008,7 @@
       border-radius: 10px;
       border: none;
       cursor: pointer;
-      font-family: 'Geist', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 0.95rem;
       transition: all 0.3s ease;
       box-shadow: 0 8px 24px rgba(6, 182, 212, 0.25);
@@ -993,22 +1023,83 @@
       transform: translateY(-1px);
     }
 
+    .social-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .social-link {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(6, 182, 212, 0.1);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-cyan);
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      background: rgba(6, 182, 212, 0.2);
+      border-color: var(--accent-cyan);
+      transform: translateY(-3px);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-muted);
+    }
+
+    footer p {
+      font-size: 0.9rem;
+    }
+
+    footer span {
+      color: var(--accent-cyan);
+    }
+
+    footer a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 768px) {
       .contact-grid {
         grid-template-columns: 1fr;
         gap: 60px;
       }
+
+      #contact {
+        padding: 100px 0;
+      }
     }
 
     @media (max-width: 480px) {
-      .contact-grid {
-        gap: 40px;
+      .contact-card {
+        padding: 24px;
+      }
+
+      .social-links {
+        justify-content: center;
       }
     }
   </style>
 </head>
 <body>
-  <!-- BACKGROUND GLOWS -->
   <div class="bg-glow bg-glow-1"></div>
   <div class="bg-glow bg-glow-2"></div>
   <div class="bg-glow bg-glow-3"></div>
@@ -1016,7 +1107,7 @@
   <!-- NAVIGATION -->
   <nav>
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo">Fahim</a>
+      <a href="#" class="nav-logo">FM</a>
       <ul class="nav-links">
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -1024,7 +1115,7 @@
         <li><a href="#timeline">Timeline</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button class="hamburger">
+      <button class="hamburger" id="hamburger">
         <span></span>
         <span></span>
         <span></span>
@@ -1041,35 +1132,29 @@
             <span class="dot"></span>
             Available for opportunities
           </div>
-
-          <h1 class="hero-title">
-            Hi, I'm <span class="name-grad">Fahim Montasir</span>
-          </h1>
-
-          <div class="hero-subtitle">
-            > Computer Science Student <span class="cursor"></span>
-          </div>
-
+          <h1 class="hero-title">Hi, I'm <span class="name-grad">Fahim Montasir</span></h1>
+          <p class="hero-subtitle">Computer Science Student & Developer</p>
           <p class="hero-desc">
-            Passionate developer at United International University. I love building scalable systems, exploring new technologies, and solving complex problems through code. Let's create something amazing together.
+            Passionate about building elegant solutions to complex problems. Specializing in full-stack development, 
+            databases, and system programming. Currently studying at United International University.
           </p>
-
           <div class="hero-cta">
-            <a href="#contact" class="btn-primary">Get In Touch</a>
-            <a href="#projects" class="btn-outline">View My Work</a>
+            <a href="#projects" class="btn-primary">
+              <i class="fas fa-arrow-right"></i> View My Work
+            </a>
+            <a href="#contact" class="btn-outline">
+              <i class="fas fa-envelope"></i> Get in Touch
+            </a>
           </div>
         </div>
-
         <div class="hero-image-wrap">
           <div class="hero-image-ring">
             <img src="image/myphoto.JPG" alt="Fahim Montasir" />
             <div class="float-badge b1">
-              <span>🚀</span>
-              <span>Full Stack Dev</span>
+              <span class="dot"></span> CS Student
             </div>
             <div class="float-badge b2">
-              <span>⚡</span>
-              <span>Problem Solver</span>
+              <i class="fas fa-code"></i> Developer
             </div>
           </div>
         </div>
@@ -1081,46 +1166,64 @@
   <section id="about">
     <div class="container">
       <div class="section-header">
-        <div class="section-label">/ About Me</div>
-        <h2 class="section-title">More About <span>Me</span></h2>
+        <span class="section-label">/ About Me</span>
+        <h2 class="section-title">Get to know <span>me better</span></h2>
       </div>
-
       <div class="about-grid">
-        <div>
-          <p class="section-desc">
-            I'm a Computer Science student at United International University with a passion for full-stack development. With experience in DBMS, OOP, and systems programming, I enjoy tackling complex challenges and building efficient solutions that make a real impact.
+        <div class="about-content">
+          <h3>🎓 United International University</h3>
+          <p>
+            I'm a Computer Science student at United International University, passionate about solving real-world 
+            problems through technology. My academic journey has equipped me with strong fundamentals in algorithms, 
+            databases, and software architecture.
           </p>
-
-          <div class="skills-grid">
-            <div class="skill-chip">💻 C++</div>
-            <div class="skill-chip">🐍 Python</div>
-            <div class="skill-chip">☕ Java</div>
-            <div class="skill-chip">🌐 HTML/CSS</div>
-            <div class="skill-chip">⚛️ React</div>
-            <div class="skill-chip">🗄️ SQL</div>
-          </div>
-        </div>
-
-        <div>
+          <h3 style="margin-top: 32px;">💡 What I Do</h3>
+          <p>
+            I specialize in developing full-stack applications, working with databases, and understanding system 
+            architectures. I believe in writing clean, maintainable code and creating user-friendly interfaces that 
+            solve actual problems.
+          </p>
           <div class="stat-row">
             <div class="stat-box">
-              <div class="stat-num">20+</div>
-              <div class="stat-label">Projects</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-num">50+</div>
-              <div class="stat-label">Solved Problems</div>
-            </div>
-          </div>
-
-          <div class="stat-row">
-            <div class="stat-box">
-              <div class="stat-num">3+</div>
-              <div class="stat-label">Years Experience</div>
+              <div class="stat-num">10+</div>
+              <div class="stat-label">Projects Completed</div>
             </div>
             <div class="stat-box">
               <div class="stat-num">100%</div>
               <div class="stat-label">Dedication</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">2+</div>
+              <div class="stat-label">Years Coding</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 style="margin-bottom: 24px;">💻 Technical Skills</h3>
+          <div class="skills-grid">
+            <div class="skill-chip">
+              <i class="fas fa-code"></i> C++
+            </div>
+            <div class="skill-chip">
+              <i class="fas fa-code"></i> Python
+            </div>
+            <div class="skill-chip">
+              <i class="fas fa-database"></i> DBMS/SQL
+            </div>
+            <div class="skill-chip">
+              <i class="fas fa-cube"></i> OOP
+            </div>
+            <div class="skill-chip">
+              <i class="fas fa-globe"></i> HTML/CSS
+            </div>
+            <div class="skill-chip">
+              <i class="fas fa-js"></i> JavaScript
+            </div>
+            <div class="skill-chip">
+              <i class="fas fa-cogs"></i> Systems Programming
+            </div>
+            <div class="skill-chip">
+              <i class="fas fa-microchip"></i> Electronics
             </div>
           </div>
         </div>
@@ -1132,56 +1235,100 @@
   <section id="projects">
     <div class="container">
       <div class="section-header center">
-        <div class="section-label">/ Portfolio</div>
+        <span class="section-label">/ Portfolio</span>
         <h2 class="section-title">Featured <span>Projects</span></h2>
         <p class="section-desc">
-          Showcasing some of my recent work, featuring full-stack applications, system designs, and innovative solutions built with modern technologies.
+          Here are some of my recent projects that showcase my skills and passion for development.
         </p>
       </div>
-
       <div class="projects-grid">
         <div class="project-card">
           <span class="project-tag tag-blue">Featured</span>
-          <span class="project-icon">💾</span>
+          <span class="project-icon">📊</span>
           <h3>Database Management System</h3>
-          <p>A comprehensive DBMS project built with C++ featuring complex query optimization, indexing, and transaction management.</p>
+          <p>A comprehensive DBMS project implementing core database concepts with query optimization and indexing.</p>
           <div class="project-tech">
-            <div class="tech-pill">C++</div>
-            <div class="tech-pill">SQL</div>
-            <div class="tech-pill">Data Structures</div>
+            <span class="tech-pill">C++</span>
+            <span class="tech-pill">SQL</span>
+            <span class="tech-pill">Algorithms</span>
           </div>
           <div class="project-footer">
-            <a href="#" class="project-link">Learn More →</a>
+            <a href="#" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
 
         <div class="project-card">
           <span class="project-tag tag-violet">Featured</span>
-          <span class="project-icon">🎮</span>
-          <h3>Game Development</h3>
-          <p>Interactive game built with Java, featuring object-oriented design patterns, physics simulation, and advanced graphics.</p>
+          <span class="project-icon">🏗️</span>
+          <h3>Object-Oriented Programming System</h3>
+          <p>Advanced OOP implementation showcasing inheritance, polymorphism, and design patterns.</p>
           <div class="project-tech">
-            <div class="tech-pill">Java</div>
-            <div class="tech-pill">OOP</div>
-            <div class="tech-pill">Graphics</div>
+            <span class="tech-pill">C++</span>
+            <span class="tech-pill">Design Patterns</span>
+            <span class="tech-pill">OOP</span>
           </div>
           <div class="project-footer">
-            <a href="#" class="project-link">Learn More →</a>
+            <a href="#" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
 
         <div class="project-card">
-          <span class="project-tag tag-green">Featured</span>
-          <span class="project-icon">🌐</span>
-          <h3>Web Application</h3>
-          <p>Full-stack web app with React frontend, Node.js backend, and MongoDB database. Real-time updates and responsive design.</p>
+          <span class="project-tag tag-pink">Featured</span>
+          <span class="project-icon">⚙️</span>
+          <h3>Systems Programming Project</h3>
+          <p>Low-level system programming involving process management, memory allocation, and OS concepts.</p>
           <div class="project-tech">
-            <div class="tech-pill">React</div>
-            <div class="tech-pill">Node.js</div>
-            <div class="tech-pill">MongoDB</div>
+            <span class="tech-pill">C</span>
+            <span class="tech-pill">Linux</span>
+            <span class="tech-pill">System Calls</span>
           </div>
           <div class="project-footer">
-            <a href="#" class="project-link">Learn More →</a>
+            <a href="#" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <span class="project-tag tag-green">Open Source</span>
+          <span class="project-icon">🔧</span>
+          <h3>Electronics & IoT</h3>
+          <p>IoT projects integrating embedded systems with web technologies for smart solutions.</p>
+          <div class="project-tech">
+            <span class="tech-pill">Arduino</span>
+            <span class="tech-pill">IoT</span>
+            <span class="tech-pill">Python</span>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <span class="project-tag tag-amber">Experiment</span>
+          <span class="project-icon">🌐</span>
+          <h3>Web Development</h3>
+          <p>Full-stack web applications with responsive design, modern UI/UX, and backend integration.</p>
+          <div class="project-tech">
+            <span class="tech-pill">HTML/CSS</span>
+            <span class="tech-pill">JavaScript</span>
+            <span class="tech-pill">Responsive</span>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <span class="project-tag tag-blue">Academic</span>
+          <span class="project-icon">📚</span>
+          <h3>Algorithm & Data Structures</h3>
+          <p>Implementation of complex algorithms and data structures with optimization and analysis.</p>
+          <div class="project-tech">
+            <span class="tech-pill">C++</span>
+            <span class="tech-pill">Algorithms</span>
+            <span class="tech-pill">DSA</span>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="project-link">Learn More <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
@@ -1192,33 +1339,56 @@
   <section id="timeline">
     <div class="container">
       <div class="section-header">
-        <div class="section-label">/ Journey</div>
-        <h2 class="section-title">My <span>Timeline</span></h2>
+        <span class="section-label">/ Journey</span>
+        <h2 class="section-title">My <span>Experience</span></h2>
       </div>
-
       <div class="timeline">
         <div class="timeline-item">
-          <div class="tl-meta">2022 - Present</div>
-          <div class="tl-title">Computer Science Student</div>
-          <div class="tl-desc">Currently pursuing B.Sc. in Computer Science at United International University with focus on systems programming and data structures.</div>
+          <div class="tl-meta">2024 - Present</div>
+          <div class="tl-title">Advanced Development</div>
+          <div class="tl-desc">
+            Working on advanced projects combining multiple technologies and focusing on system design and optimization.
+          </div>
         </div>
 
         <div class="timeline-item">
           <div class="tl-meta">2023 - 2024</div>
           <div class="tl-title">Full Stack Development</div>
-          <div class="tl-desc">Developed multiple full-stack web applications using React, Node.js, and various databases. Gained expertise in modern web development practices.</div>
+          <div class="tl-desc">
+            Expanded skills to cover full-stack development with focus on backend optimization and database design.
+          </div>
         </div>
 
         <div class="timeline-item">
-          <div class="tl-meta">2024</div>
-          <div class="tl-title">Open Source Contributions</div>
-          <div class="tl-desc">Started contributing to open-source projects and built several tools that help other developers in their workflow.</div>
+          <div class="tl-meta">2022 - 2023</div>
+          <div class="tl-title">Backend Development</div>
+          <div class="tl-desc">
+            Deep dive into backend systems, APIs, and database management with C++ and Python.
+          </div>
         </div>
 
         <div class="timeline-item">
-          <div class="tl-meta">2024 - Present</div>
-          <div class="tl-title">Advanced Systems Design</div>
-          <div class="tl-desc">Exploring advanced topics in systems programming, compiler design, and performance optimization techniques.</div>
+          <div class="tl-meta">2021 - 2022</div>
+          <div class="tl-title">Frontend Development</div>
+          <div class="tl-desc">
+            Started with web development, learning HTML, CSS, JavaScript and creating responsive user interfaces.
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-meta">2020 - 2021</div>
+          <div class="tl-title">Programming Fundamentals</div>
+          <div class="tl-desc">
+            Learned core programming concepts in C and C++, focusing on algorithms and data structures.
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="tl-meta">2020</div>
+          <div class="tl-title">Coding Journey Begins</div>
+          <div class="tl-desc">
+            Started my coding journey with enthusiasm to learn and build amazing things.
+          </div>
         </div>
       </div>
     </div>
@@ -1228,60 +1398,131 @@
   <section id="contact">
     <div class="container">
       <div class="section-header center">
-        <div class="section-label">/ Get In Touch</div>
-        <h2 class="section-title">Let's <span>Connect</span></h2>
+        <span class="section-label">/ Get in Touch</span>
+        <h2 class="section-title">Let's Work <span>Together</span></h2>
         <p class="section-desc">
-          Have an exciting opportunity or just want to chat? Feel free to reach out through any of these channels.
+          I'm always open to discussing new projects, exciting opportunities, or how I can help you solve your tech challenges.
         </p>
       </div>
-
       <div class="contact-grid">
-        <div class="contact-card">
-          <a href="mailto:fahim@example.com" class="contact-link-row">
-            <div class="cl-icon">✉️</div>
-            <div>
-              <div class="cl-label">Email</div>
-              <div class="cl-value">fahim@example.com</div>
-            </div>
-          </a>
-          <a href="https://linkedin.com" class="contact-link-row">
-            <div class="cl-icon">🔗</div>
-            <div>
-              <div class="cl-label">LinkedIn</div>
-              <div class="cl-value">My Profile</div>
-            </div>
-          </a>
-          <a href="https://github.com" class="contact-link-row">
-            <div class="cl-icon">🐙</div>
-            <div>
-              <div class="cl-label">GitHub</div>
-              <div class="cl-value">My Repositories</div>
-            </div>
-          </a>
+        <div class="contact-info">
+          <div class="contact-card">
+            <a href="mailto:montasirseyam@gmail.com" class="contact-link-row">
+              <div class="cl-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <div class="cl-label">Email</div>
+                <div class="cl-value">montasirseyam@gmail.com</div>
+              </div>
+            </a>
+            <a href="tel:+8801642150406" class="contact-link-row">
+              <div class="cl-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <div class="cl-label">Phone</div>
+                <div class="cl-value">+880 1642 150406</div>
+              </div>
+            </a>
+            <a href="https://github.com/Fahim232" target="_blank" class="contact-link-row">
+              <div class="cl-icon">
+                <i class="fab fa-github"></i>
+              </div>
+              <div>
+                <div class="cl-label">GitHub</div>
+                <div class="cl-value">@Fahim232</div>
+              </div>
+            </a>
+            <a href="#" class="contact-link-row">
+              <div class="cl-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div>
+                <div class="cl-label">University</div>
+                <div class="cl-value">United International University</div>
+              </div>
+            </a>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/Fahim232" target="_blank" class="social-link" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:montasirseyam@gmail.com" class="social-link" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+8801642150406" class="social-link" title="Phone">
+              <i class="fas fa-phone"></i>
+            </a>
+          </div>
         </div>
 
-        <form class="contact-form">
+        <form class="contact-form" action="https://formspree.io/f/your_form_id" method="POST">
           <div class="form-group">
-            <label class="form-label">Name</label>
-            <input type="text" class="form-input" placeholder="Your name" />
+            <label for="name" class="form-label">Full Name</label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              class="form-input" 
+              placeholder="Your name" 
+              required
+            />
           </div>
+
           <div class="form-group">
-            <label class="form-label">Email</label>
-            <input type="email" class="form-input" placeholder="your@email.com" />
+            <label for="email" class="form-label">Email Address</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              class="form-input" 
+              placeholder="your@email.com" 
+              required
+            />
           </div>
+
           <div class="form-group">
-            <label class="form-label">Message</label>
-            <textarea class="form-textarea" placeholder="Your message here..."></textarea>
+            <label for="subject" class="form-label">Subject</label>
+            <input 
+              type="text" 
+              id="subject" 
+              name="subject" 
+              class="form-input" 
+              placeholder="How can I help?" 
+              required
+            />
           </div>
-          <button type="submit" class="form-submit">Send Message</button>
+
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea 
+              id="message" 
+              name="message" 
+              class="form-textarea" 
+              placeholder="Your message here..." 
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
         </form>
       </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>© 2024 <span>Fahim Montasir</span>. All rights reserved. | Computer Science Student | <a href="https://github.com/Fahim232" target="_blank">GitHub</a></p>
+    </div>
+  </footer>
+
   <script>
     // Mobile menu toggle
-    const hamburger = document.querySelector('.hamburger');
+    const hamburger = document.getElementById('hamburger');
     const navLinks = document.querySelector('.nav-links');
 
     hamburger.addEventListener('click', () => {
@@ -1289,7 +1530,7 @@
       navLinks.classList.toggle('open');
     });
 
-    // Close menu when link is clicked
+    // Close menu when a link is clicked
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         hamburger.classList.remove('open');
@@ -1300,13 +1541,37 @@
     // Smooth scroll for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
+        const href = this.getAttribute('href');
+        if (href !== '#') {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }
+      });
+    });
+
+    // Active nav link highlighting
+    window.addEventListener('scroll', () => {
+      let current = '';
+      const sections = document.querySelectorAll('section');
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= (sectionTop - 200)) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').slice(1) === current) {
+          link.classList.add('active');
         }
       });
     });
