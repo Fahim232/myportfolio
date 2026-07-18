@@ -998,108 +998,78 @@
         grid-template-columns: 1fr;
         gap: 60px;
       }
-      .contact-card {
-        padding: 32px;
+    }
+
+    @media (max-width: 480px) {
+      .contact-grid {
+        gap: 40px;
       }
-    }
-
-    /* FOOTER */
-    footer {
-      background: var(--bg-secondary);
-      border-top: 1px solid var(--border);
-      padding: 50px 0;
-      text-align: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .footer-logo {
-      font-weight: 800;
-      font-size: 1.4rem;
-      letter-spacing: -0.5px;
-      background: var(--grad-main);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 12px;
-    }
-
-    .footer-text {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      line-height: 1.6;
-    }
-
-    /* ANIMATIONS */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* UTILITY CLASSES */
-    .text-gradient {
-      background: var(--grad-main);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
     }
   </style>
 </head>
 <body>
+  <!-- BACKGROUND GLOWS -->
   <div class="bg-glow bg-glow-1"></div>
   <div class="bg-glow bg-glow-2"></div>
   <div class="bg-glow bg-glow-3"></div>
 
+  <!-- NAVIGATION -->
   <nav>
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo">&lt;Fahim /&gt;</a>
-      <ul class="nav-links" id="navLinks">
+      <a href="#hero" class="nav-logo">Fahim</a>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#timeline">Journey</a></li>
+        <li><a href="#timeline">Timeline</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
   </nav>
 
+  <!-- HERO SECTION -->
   <section id="hero">
     <div class="container">
       <div class="hero-grid">
         <div>
-          <div class="hero-badge"><span class="dot"></span>Available for opportunities</div>
-          <h1 class="hero-title">Hi, I'm<br><span class="name-grad">Fahim Montasir</span></h1>
-          <p class="hero-subtitle">&gt; <span id="typewriter-text"></span><span class="cursor"></span></p>
-          <p class="hero-desc">Computer Science student at <strong>United International University</strong>, crafting elegant solutions to complex problems through code. Passionate about databases, systems programming, and building real-world applications.</p>
+          <div class="hero-badge">
+            <span class="dot"></span>
+            Available for opportunities
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="name-grad">Fahim Montasir</span>
+          </h1>
+
+          <div class="hero-subtitle">
+            > Computer Science Student <span class="cursor"></span>
+          </div>
+
+          <p class="hero-desc">
+            Passionate developer at United International University. I love building scalable systems, exploring new technologies, and solving complex problems through code. Let's create something amazing together.
+          </p>
+
           <div class="hero-cta">
-            <a href="#projects" class="btn-primary">View My Work →</a>
-            <a href="#contact" class="btn-outline">Get In Touch</a>
+            <a href="#contact" class="btn-primary">Get In Touch</a>
+            <a href="#projects" class="btn-outline">View My Work</a>
           </div>
         </div>
+
         <div class="hero-image-wrap">
           <div class="hero-image-ring">
-            <img src="fahim_profile.png" alt="Fahim Montasir - CS Student at UIU" />
-          </div>
-          <div class="float-badge b1">
-            <span>🏆</span>
-            <div>
-              <div style="font-size:0.7rem;color:var(--text-muted)">Achievement</div>
-              <div>2nd Runner-up</div>
+            <img src="image/myphoto.JPG" alt="Fahim Montasir" />
+            <div class="float-badge b1">
+              <span>🚀</span>
+              <span>Full Stack Dev</span>
             </div>
-          </div>
-          <div class="float-badge b2">
-            <span>💻</span>
-            <div>
-              <div style="font-size:0.7rem;color:var(--text-muted)">University</div>
-              <div>UIU · CSE</div>
+            <div class="float-badge b2">
+              <span>⚡</span>
+              <span>Problem Solver</span>
             </div>
           </div>
         </div>
@@ -1107,291 +1077,238 @@
     </div>
   </section>
 
+  <!-- ABOUT SECTION -->
   <section id="about">
     <div class="container">
+      <div class="section-header">
+        <div class="section-label">/ About Me</div>
+        <h2 class="section-title">More About <span>Me</span></h2>
+      </div>
+
       <div class="about-grid">
         <div>
-          <div class="section-header">
-            <div class="section-label">// about me</div>
-            <h2 class="section-title">Passionate about <span>building things</span></h2>
-            <p class="section-desc">I'm a final-year Computer Science student who loves turning complex problems into elegant, working solutions. From low-level systems programming to relational database design, I enjoy the full spectrum of computer science.</p>
-            <p class="section-desc" style="margin-top:16px;">Currently working on my <strong style="color:var(--accent-cyan)">Final Year Design Project</strong> and recently achieved <strong style="color:#fbbf24">2nd Runner-up</strong> in the Electronics Lab Competition among 100+ teams.</p>
-          </div>
-          <div class="stat-row">
-            <div class="stat-box fade-in"><div class="stat-num">4+</div><div class="stat-label">Major Projects</div></div>
-            <div class="stat-box fade-in"><div class="stat-num">100+</div><div class="stat-label">Teams Outranked</div></div>
-            <div class="stat-box fade-in"><div class="stat-num">∞</div><div class="stat-label">Lines of Code</div></div>
+          <p class="section-desc">
+            I'm a Computer Science student at United International University with a passion for full-stack development. With experience in DBMS, OOP, and systems programming, I enjoy tackling complex challenges and building efficient solutions that make a real impact.
+          </p>
+
+          <div class="skills-grid">
+            <div class="skill-chip">💻 C++</div>
+            <div class="skill-chip">🐍 Python</div>
+            <div class="skill-chip">☕ Java</div>
+            <div class="skill-chip">🌐 HTML/CSS</div>
+            <div class="skill-chip">⚛️ React</div>
+            <div class="skill-chip">🗄️ SQL</div>
           </div>
         </div>
+
         <div>
-          <h3 style="font-weight:700;margin-bottom:24px;color:var(--text-muted);font-size:0.8rem;text-transform:uppercase;letter-spacing:0.1em;">Tech Stack & Skills</h3>
-          <div class="skills-grid">
-            <div class="skill-chip fade-in"><span>🗄️</span> SQL / DBMS</div>
-            <div class="skill-chip fade-in"><span>☕</span> Java / OOP</div>
-            <div class="skill-chip fade-in"><span>⚙️</span> C Programming</div>
-            <div class="skill-chip fade-in"><span>🌐</span> Web Dev</div>
-            <div class="skill-chip fade-in"><span>🐍</span> Python</div>
-            <div class="skill-chip fade-in"><span>⚡</span> Electronics</div>
-            <div class="skill-chip fade-in"><span>🐙</span> Git / GitHub</div>
-            <div class="skill-chip fade-in"><span>💾</span> Linux / CLI</div>
+          <div class="stat-row">
+            <div class="stat-box">
+              <div class="stat-num">20+</div>
+              <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">50+</div>
+              <div class="stat-label">Solved Problems</div>
+            </div>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat-box">
+              <div class="stat-num">3+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">100%</div>
+              <div class="stat-label">Dedication</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- PROJECTS SECTION -->
   <section id="projects">
     <div class="container">
       <div class="section-header center">
-        <div class="section-label">// projects</div>
-        <h2 class="section-title">Things I've <span>Built</span></h2>
-        <p class="section-desc">A selection of academic and personal projects showcasing my skills across different domains.</p>
+        <div class="section-label">/ Portfolio</div>
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <p class="section-desc">
+          Showcasing some of my recent work, featuring full-stack applications, system designs, and innovative solutions built with modern technologies.
+        </p>
       </div>
+
       <div class="projects-grid">
-        <div class="project-card fade-in">
-          <span class="project-tag tag-blue">Database</span>
-          <span class="project-icon">🗄️</span>
-          <h3>DBMS Project</h3>
-          <p>Designed and implemented a full relational database system. Covered schema design, normalization, queries, stored procedures, and transaction management.</p>
-          <div class="project-tech"><span class="tech-pill">SQL</span><span class="tech-pill">ER Modeling</span><span class="tech-pill">Normalization</span></div>
-          <div class="project-footer"><a href="#" class="project-link">View Project →</a></div>
+        <div class="project-card">
+          <span class="project-tag tag-blue">Featured</span>
+          <span class="project-icon">💾</span>
+          <h3>Database Management System</h3>
+          <p>A comprehensive DBMS project built with C++ featuring complex query optimization, indexing, and transaction management.</p>
+          <div class="project-tech">
+            <div class="tech-pill">C++</div>
+            <div class="tech-pill">SQL</div>
+            <div class="tech-pill">Data Structures</div>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="project-link">Learn More →</a>
+          </div>
         </div>
-        <div class="project-card fade-in">
-          <span class="project-tag tag-violet">OOP / Java</span>
-          <span class="project-icon">☕</span>
-          <h3>AOOP Project</h3>
-          <p>Advanced Object-Oriented Programming project leveraging design patterns, inheritance, polymorphism, and abstraction to build a scalable Java application.</p>
-          <div class="project-tech"><span class="tech-pill">Java</span><span class="tech-pill">Design Patterns</span><span class="tech-pill">OOP</span></div>
-          <div class="project-footer"><a href="#" class="project-link">View Project →</a></div>
+
+        <div class="project-card">
+          <span class="project-tag tag-violet">Featured</span>
+          <span class="project-icon">🎮</span>
+          <h3>Game Development</h3>
+          <p>Interactive game built with Java, featuring object-oriented design patterns, physics simulation, and advanced graphics.</p>
+          <div class="project-tech">
+            <div class="tech-pill">Java</div>
+            <div class="tech-pill">OOP</div>
+            <div class="tech-pill">Graphics</div>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="project-link">Learn More →</a>
+          </div>
         </div>
-        <div class="project-card fade-in">
-          <span class="project-tag tag-green">Systems / C</span>
-          <span class="project-icon">⚙️</span>
-          <h3>SPL Project (C)</h3>
-          <p>Systems Programming Lab project in C — working with memory management, pointers, file I/O, and low-level system operations for real-world problem solving.</p>
-          <div class="project-tech"><span class="tech-pill">C</span><span class="tech-pill">Memory Mgmt</span><span class="tech-pill">File I/O</span></div>
-          <div class="project-footer"><a href="#" class="project-link">View Project →</a></div>
-        </div>
-        <div class="project-card fade-in">
-          <span class="project-tag tag-pink">Final Year</span>
-          <span class="project-icon">🚀</span>
-          <h3>Final Year Design Project</h3>
-          <p>Currently in progress — a comprehensive capstone project that synthesizes the full breadth of my CS degree into a meaningful, real-world application.</p>
-          <div class="project-tech"><span class="tech-pill">In Progress</span><span class="tech-pill">Research</span><span class="tech-pill">Full-Stack</span></div>
-          <div class="project-footer"><span style="color:var(--accent-pink);font-size:0.85rem;font-weight:600;">🔨 In Development</span></div>
-        </div>
-        <div class="project-card fade-in">
-          <span class="project-tag tag-amber">Electronics</span>
-          <span class="project-icon">🏆</span>
-          <h3>Electronics Lab Project</h3>
-          <p>Awarded 2nd Runner-up among 100+ competing teams. Designed and implemented an electronics project demonstrating circuit design and hardware-software integration.</p>
-          <div class="project-tech"><span class="tech-pill">Circuit Design</span><span class="tech-pill">Embedded</span><span class="tech-pill">Hardware</span></div>
-          <div class="project-footer"><span class="award-badge">👏 2nd Runner-up · 100+ Teams</span></div>
+
+        <div class="project-card">
+          <span class="project-tag tag-green">Featured</span>
+          <span class="project-icon">🌐</span>
+          <h3>Web Application</h3>
+          <p>Full-stack web app with React frontend, Node.js backend, and MongoDB database. Real-time updates and responsive design.</p>
+          <div class="project-tech">
+            <div class="tech-pill">React</div>
+            <div class="tech-pill">Node.js</div>
+            <div class="tech-pill">MongoDB</div>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="project-link">Learn More →</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- TIMELINE SECTION -->
   <section id="timeline">
     <div class="container">
       <div class="section-header">
-        <div class="section-label">// my journey</div>
-        <h2 class="section-title">Academic <span>Timeline</span></h2>
+        <div class="section-label">/ Journey</div>
+        <h2 class="section-title">My <span>Timeline</span></h2>
       </div>
+
       <div class="timeline">
-        <div class="timeline-item fade-in">
-          <div class="tl-meta">United International University · Ongoing</div>
-          <div class="tl-title">B.Sc. in Computer Science & Engineering</div>
-          <div class="tl-desc">Pursuing a full CSE degree covering algorithms, databases, systems programming, OOP, electronics, and software engineering.</div>
+        <div class="timeline-item">
+          <div class="tl-meta">2022 - Present</div>
+          <div class="tl-title">Computer Science Student</div>
+          <div class="tl-desc">Currently pursuing B.Sc. in Computer Science at United International University with focus on systems programming and data structures.</div>
         </div>
-        <div class="timeline-item fade-in">
-          <div class="tl-meta">Academic Project</div>
-          <div class="tl-title">DBMS Project — Relational Database System</div>
-          <div class="tl-desc">Completed a comprehensive database management project with schema design, SQL queries, normalization, and transaction handling.</div>
+
+        <div class="timeline-item">
+          <div class="tl-meta">2023 - 2024</div>
+          <div class="tl-title">Full Stack Development</div>
+          <div class="tl-desc">Developed multiple full-stack web applications using React, Node.js, and various databases. Gained expertise in modern web development practices.</div>
         </div>
-        <div class="timeline-item fade-in">
-          <div class="tl-meta">Academic Project</div>
-          <div class="tl-title">AOOP Project — Advanced Java Application</div>
-          <div class="tl-desc">Built a feature-rich Java application applying advanced OOP principles, design patterns, and software architecture concepts.</div>
+
+        <div class="timeline-item">
+          <div class="tl-meta">2024</div>
+          <div class="tl-title">Open Source Contributions</div>
+          <div class="tl-desc">Started contributing to open-source projects and built several tools that help other developers in their workflow.</div>
         </div>
-        <div class="timeline-item fade-in">
-          <div class="tl-meta">Academic Project</div>
-          <div class="tl-title">SPL Project — Systems Programming in C</div>
-          <div class="tl-desc">Developed a low-level C application focusing on memory, pointers, data structures, and system-level problem solving.</div>
-        </div>
-        <div class="timeline-item fade-in">
-          <div class="tl-meta">Achievement 🏆</div>
-          <div class="tl-title">2nd Runner-up — Electronics Lab Competition</div>
-          <div class="tl-desc">Secured 2nd Runner-up position among 100+ competing teams in the Electronics Lab Project Competition at UIU.</div>
-        </div>
-        <div class="timeline-item fade-in">
-          <div class="tl-meta">Current · In Progress</div>
-          <div class="tl-title">Final Year Design Project (FYDP)</div>
-          <div class="tl-desc">Currently working on the capstone design project that represents the culmination of the CSE program.</div>
+
+        <div class="timeline-item">
+          <div class="tl-meta">2024 - Present</div>
+          <div class="tl-title">Advanced Systems Design</div>
+          <div class="tl-desc">Exploring advanced topics in systems programming, compiler design, and performance optimization techniques.</div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- CONTACT SECTION -->
   <section id="contact">
     <div class="container">
       <div class="section-header center">
-        <div class="section-label">// contact</div>
-        <h2 class="section-title">Get In <span>Touch</span></h2>
-        <p class="section-desc">Whether it's a project opportunity or just a chat, I'd love to hear from you.</p>
+        <div class="section-label">/ Get In Touch</div>
+        <h2 class="section-title">Let's <span>Connect</span></h2>
+        <p class="section-desc">
+          Have an exciting opportunity or just want to chat? Feel free to reach out through any of these channels.
+        </p>
       </div>
+
       <div class="contact-grid">
         <div class="contact-card">
-          <a href="mailto:montasirseyam@gmail.com" class="contact-link-row">
-            <div class="cl-icon">📧</div>
-            <div><div class="cl-label">Email</div><div class="cl-value">montasirseyam@gmail.com</div></div>
+          <a href="mailto:fahim@example.com" class="contact-link-row">
+            <div class="cl-icon">✉️</div>
+            <div>
+              <div class="cl-label">Email</div>
+              <div class="cl-value">fahim@example.com</div>
+            </div>
           </a>
-          <a href="tel:01642150406" class="contact-link-row">
-            <div class="cl-icon">📞</div>
-            <div><div class="cl-label">Phone</div><div class="cl-value">+880 1642 150406</div></div>
+          <a href="https://linkedin.com" class="contact-link-row">
+            <div class="cl-icon">🔗</div>
+            <div>
+              <div class="cl-label">LinkedIn</div>
+              <div class="cl-value">My Profile</div>
+            </div>
           </a>
-          <a href="https://github.com/fahimmontasir" target="_blank" class="contact-link-row">
+          <a href="https://github.com" class="contact-link-row">
             <div class="cl-icon">🐙</div>
-            <div><div class="cl-label">GitHub</div><div class="cl-value">github.com/fahimmontasir</div></div>
-          </a>
-          <a href="https://linkedin.com/in/fahimmontasir" target="_blank" class="contact-link-row">
-            <div class="cl-icon">💼</div>
-            <div><div class="cl-label">LinkedIn</div><div class="cl-value">linkedin.com/in/fahimmontasir</div></div>
-          </a>
-          <a href="https://www.uiu.ac.bd" target="_blank" class="contact-link-row">
-            <div class="cl-icon">🎓</div>
-            <div><div class="cl-label">University</div><div class="cl-value">United International University</div></div>
+            <div>
+              <div class="cl-label">GitHub</div>
+              <div class="cl-value">My Repositories</div>
+            </div>
           </a>
         </div>
-        <div>
-          <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
-            <div class="form-group">
-              <label class="form-label" for="form-name">Your Name</label>
-              <input id="form-name" class="form-input" type="text" placeholder="John Doe" required />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="form-email">Email Address</label>
-              <input id="form-email" class="form-input" type="email" placeholder="john@example.com" required />
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="form-message">Message</label>
-              <textarea id="form-message" class="form-textarea" placeholder="Your message here..." required></textarea>
-            </div>
-            <button type="submit" class="form-submit">Send Message 🚀</button>
-          </form>
-        </div>
+
+        <form class="contact-form">
+          <div class="form-group">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-input" placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-input" placeholder="your@email.com" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="form-textarea" placeholder="Your message here..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Message</button>
+        </form>
       </div>
     </div>
   </section>
 
-  <footer>
-    <div class="container">
-      <div class="footer-logo">&lt;Fahim Montasir /&gt;</div>
-      <p class="footer-text">CS Student · Developer · Problem Solver</p>
-      <p class="footer-text" style="margin-top:12px;">© 2026 Fahim Montasir. Built with ❤️ and lots of ☕</p>
-    </div>
-  </footer>
-
   <script>
-    // Mobile Menu Toggle
-    function toggleMenu() {
-      const hamburger = document.getElementById('hamburger');
-      const navLinks = document.getElementById('navLinks');
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('open');
       navLinks.classList.toggle('open');
-    }
+    });
 
-    // Close menu on link click
+    // Close menu when link is clicked
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
-        document.getElementById('hamburger').classList.remove('open');
-        document.getElementById('navLinks').classList.remove('open');
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
       });
     });
 
-    // Typewriter Effect
-    const phrases = [
-      'CS Student @ UIU',
-      'DBMS Developer',
-      'Java / OOP Enthusiast',
-      'C Systems Programmer',
-      'Electronics Enthusiast',
-      'Problem Solver'
-    ];
-    let pIdx = 0, cIdx = 0, deleting = false;
-    const tw = document.getElementById('typewriter-text');
-
-    function typeLoop() {
-      const cur = phrases[pIdx];
-      if (!deleting) {
-        tw.textContent = cur.slice(0, ++cIdx);
-        if (cIdx === cur.length) {
-          deleting = true;
-          setTimeout(typeLoop, 2000);
-          return;
-        }
-      } else {
-        tw.textContent = cur.slice(0, --cIdx);
-        if (cIdx === 0) {
-          deleting = false;
-          pIdx = (pIdx + 1) % phrases.length;
-        }
-      }
-      setTimeout(typeLoop, deleting ? 50 : 100);
-    }
-    typeLoop();
-
-    // Intersection Observer for Fade-in animations
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-    // Contact Form Handler
-    function handleSubmit(e) {
-      e.preventDefault();
-      const btn = document.getElementById('contact-submit');
-      const originalText = btn.textContent;
-      btn.textContent = '✓ Sent! Thank you';
-      btn.style.opacity = '0.7';
-      btn.disabled = true;
-
-      setTimeout(() => {
-        btn.textContent = originalText;
-        btn.style.opacity = '1';
-        btn.disabled = false;
-        e.target.reset();
-      }, 3000);
-    }
-
-    // Active navigation link on scroll
-    window.addEventListener('scroll', () => {
-      let current = '';
-      document.querySelectorAll('section[id]').forEach(section => {
-        if (window.scrollY >= section.offsetTop - 100) {
-          current = section.id;
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
         }
       });
-
-      document.querySelectorAll('.nav-links a').forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) {
-          link.classList.add('active');
-        }
-      });
-    });
-
-    // Smooth page load
-    window.addEventListener('load', () => {
-      document.body.style.opacity = '1';
     });
   </script>
 </body>
